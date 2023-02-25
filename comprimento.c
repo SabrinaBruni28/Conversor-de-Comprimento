@@ -30,7 +30,7 @@ void Adiciona_Valor(Comprimento* comp, int n, float valor){
 void Converte_km(Comprimento* comp, int n2){
     switch (n2){
         case 1:
-            printf("Valor de km para km: %.2f", comp->km);
+            printf("\n\033[1;34m# %.2fkm correspondem %.2fkm\n\033[m", comp->km, comp->km);
             break;
         case 2:
             km_hm(comp);
@@ -59,7 +59,7 @@ void Converte_hm(Comprimento* comp, int n2){
             hm_km(comp);
             break;
         case 2:
-            printf("Valor de hm para hm: %.2f", comp->hm);
+            printf("\n\033[1;34m# %.2fhm correspondem a %.2fhm\n\033[m", comp->hm, comp->hm);
             break;
         case 3:
             hm_dam(comp);
@@ -88,7 +88,7 @@ void Converte_dam(Comprimento* comp, int n2){
             dam_hm(comp);
             break;
         case 3:
-            printf("Valor de dam para dam: %.2f", comp->dam);
+            printf("\n\033[1;34m# %.2fdam correspondem a %.2fdam\n\033[m", comp->dam, comp->dam);
             break;
         case 4:
             dam_m(comp);
@@ -117,7 +117,7 @@ void Converte_m(Comprimento* comp, int n2){
             m_dam(comp);
             break;
         case 4:
-            printf("Valor de m para m: %.2f", comp->m);
+            printf("\n\033[1;34m# %.2fm correspondem a %.2fm\n\033[m", comp->m, comp->m);
             break;
         case 5:
             m_dm(comp);
@@ -146,7 +146,7 @@ void Converte_dm(Comprimento* comp, int n2){
             dm_m(comp);
             break;
         case 5:
-            printf("Valor de dm para dm: %.2f", comp->dm);
+            printf("\n\033[1;34m# %.2fdm correspondem a %.2fdm\n\033[m", comp->dm, comp->dm);
             break;
         case 6:
             dm_cm(comp);
@@ -175,7 +175,7 @@ void Converte_cm(Comprimento* comp, int n2){
             cm_dm(comp);
             break;
         case 6:
-            printf("Valor de cm para cm: %.2f", comp->cm);
+            printf("\n\033[1;34m# %.2fcm correspondem a %.2fcm\n\033[m", comp->cm, comp->cm);
             break;
         case 7:
             cm_mm(comp);
@@ -204,7 +204,7 @@ void Converte_mm(Comprimento* comp, int n2){
             mm_cm(comp);
             break;
         case 7:
-            printf("Valor de mm para mm: %.2f", comp->mm);
+            printf("\n\033[1;34m# %.2fmm correspondem a %.2fmm\n\033[m", comp->mm, comp->mm);
             break;
     }
 }
@@ -234,216 +234,213 @@ void Converte_Valor(Comprimento* comp, int n1, int n2){
             break;
     }
 }
-
-
-
 /*Funcao que converte quilometro para hectometro*/
 void km_hm(Comprimento* comp){
     comp->hm = comp->km * 10;
-    printf("%.2fkm correspondem a %.2fhm", comp->km, comp->hm);
+    printf("\n\033[1;34m# %.2fkm correspondem a %.2fhm\n\033[m", comp->km, comp->hm);
 }
 /*Funcao que converte hectometro para quilometro*/
 void hm_km(Comprimento* comp){
     comp->km = comp->hm / 10;
-    printf("%.2fhm correspondem a %.2fkm", comp->hm, comp->km);
+    printf("\n\033[1;34m# %.2fhm correspondem a %.2fkm\n\033[m", comp->hm, comp->km);
 }
 /*Funcao que converte quilometro para decametro*/
 void km_dam(Comprimento* comp){
     comp->dam = comp->km * 100;
-    printf("%.2fkm correspondem a %.2fdam", comp->km, comp->dam);
+    printf("\n\033[1;34m# %.2fkm correspondem a %.2fdam\n\033[m", comp->km, comp->dam);
 }
 /*Funcao que converte decametro para quilometro*/
 void dam_km(Comprimento* comp){
     comp->km = comp->dam / 100;
-    printf("%.2fdam correspondem a %.2fkm", comp->dam, comp->km);
+    printf("\n\033[1;34m# %.2fdam correspondem a %.2fkm\n\033[m", comp->dam, comp->km);
 }
 /*Funcao que converte quilometro para metro*/
 void km_m(Comprimento* comp){
     comp->m = comp->km * 1000;
-    printf("%.2fkm correspondem a %.2fm", comp->km, comp->m);
+    printf("\n\033[1;34m# %.2fkm correspondem a %.2fm\n\033[m", comp->km, comp->m);
 }
 /*Funcao que converte metro para quilometro*/
 void m_km(Comprimento* comp){
     comp->km = comp->m / 1000;
-    printf("%.2fm correspondem a %.2fkm", comp->m, comp->km);
+    printf("\n\033[1;34m# %.2fm correspondem a %.2fkm\n\033[m", comp->m, comp->km);
 }
 /*Funcao que converte quilometro para decimetro*/
 void km_dm(Comprimento* comp){
     comp->dm = comp->km * 10000;
-    printf("%.2fkm correspondem a %.2fdm", comp->km, comp->dm);
+    printf("\n\033[1;34m# %.2fkm correspondem a %.2fdm\n\033[m", comp->km, comp->dm);
 }
 /*Funcao que converte decimetro para quilometro*/
 void dm_km(Comprimento* comp){
     comp->km = comp->dm / 10000;
-    printf("%.2fdm correspondem a %.2fkm", comp->dm, comp->km);
+    printf("\n\033[1;34m# %.2fdm correspondem a %.2fkm\n\033[m", comp->dm, comp->km);
 }
 /*Funcao que converte quilometro para centimetro*/
 void km_cm(Comprimento* comp){
     comp->cm = comp->km * 100000;
-    printf("%.2fkm correspondem a %.2fcm", comp->km, comp->cm);
+    printf("\n\033[1;34m# %.2fkm correspondem a %.2fcm\n\033[m", comp->km, comp->cm);
 }
 /*Funcao que converte centimetro para quilometro*/
 void cm_km(Comprimento* comp){
     comp->km = comp->cm / 100000;
-    printf("%.2fcm correspondem a %.2fkm", comp->cm, comp->km);
+    printf("\n\033[1;34m# %.2fcm correspondem a %.2fkm\n\033[m", comp->cm, comp->km);
 }
 /*Funcao que converte quilometro para milimetro*/
 void km_mm(Comprimento* comp){
     comp->mm = comp->km * 1000000;
-    printf("%.2fkm correspondem a %.2fmm", comp->km, comp->mm);
+    printf("\n\033[1;34m# %.2fkm correspondem a %.2fmm\n\033[m", comp->km, comp->mm);
 }
 /*Funcao que converte milimetro para quilometro*/
 void mm_km(Comprimento* comp){
     comp->km = comp->mm / 1000000;
-    printf("%.2fmm correspondem a %.2fkm", comp->mm, comp->km);
+    printf("\n\033[1;34m# %.2fmm correspondem a %.2fkm\n\033[m", comp->mm, comp->km);
 }
 /*Funcao que converte hectometro para decametro*/
 void hm_dam(Comprimento* comp){
     comp->dam = comp->hm * 10;
-    printf("%.2fhm correspondem a %.2fdam", comp->hm, comp->dam);
+    printf("\n\033[1;34m# %.2fhm correspondem a %.2fdam\n\033[m", comp->hm, comp->dam);
 }
 /*Funcao que converte decametro para hectometro*/
 void dam_hm(Comprimento* comp){
     comp->hm = comp->dam / 10;
-    printf("%.2fdam correspondem a %.2fhm", comp->dam, comp->hm);
+    printf("\n\033[1;34m# %.2fdam correspondem a %.2fhm\n\033[m", comp->dam, comp->hm);
 }
 /*Funcao que converte hectometro para metro*/
 void hm_m(Comprimento* comp){
     comp->m = comp->hm * 100;
-    printf("%.2fhm correspondem a %.2fm", comp->hm, comp->m);
+    printf("\n\033[1;34m# %.2fhm correspondem a %.2fm\n\033[m", comp->hm, comp->m);
 }
 /*Funcao que converte metro para hectometro*/
 void m_hm(Comprimento* comp){
     comp->hm = comp->m / 100;
-    printf("%.2fm correspondem a %.2fhm", comp->m, comp->hm);
+    printf("\n\033[1;34m# %.2fm correspondem a %.2fhm\n\033[m", comp->m, comp->hm);
 }
 /*Funcao que converte hectometro para decimetro*/
 void hm_dm(Comprimento* comp){
     comp->dm = comp->hm * 1000;
-    printf("%.2fhm correspondem a %.2fdm", comp->hm, comp->dm);
+    printf("\n\033[1;34m# %.2fhm correspondem a %.2fdm\n\033[m", comp->hm, comp->dm);
 }
 /*Funcao que converte decimetro para hectometro*/
 void dm_hm(Comprimento* comp){
     comp->hm = comp->dm / 1000;
-    printf("%.2fdm correspondem a %.2fhm", comp->dm, comp->hm);
+    printf("\n\033[1;34m# %.2fdm correspondem a %.2fhm\n\033[m", comp->dm, comp->hm);
 }
 /*Funcao que converte hectometro para centimetro*/
 void hm_cm(Comprimento* comp){
     comp->cm = comp->hm * 10000;
-    printf("%.2fhm correspondem a %.2fcm", comp->hm, comp->cm);
+    printf("\n\033[1;34m# %.2fhm correspondem a %.2fcm\n\033[m", comp->hm, comp->cm);
 }
 /*Funcao que converte centimetro para hectometro*/
 void cm_hm(Comprimento* comp){
     comp->hm = comp->cm / 10000;
-    printf("%.2fcm correspondem a %.2fhm", comp->cm, comp->hm);
+    printf("\n\033[1;34m# %.2fcm correspondem a %.2fhm\n\033[m", comp->cm, comp->hm);
 }
 /*Funcao que converte hectometro para milimetro*/
 void hm_mm(Comprimento* comp){
     comp->mm = comp->hm * 100000;
-    printf("%.2fhm correspondem a %.2fmm", comp->hm, comp->mm);
+    printf("\n\033[1;34m# %.2fhm correspondem a %.2fmm\n\033[m", comp->hm, comp->mm);
 }
 /*Funcao que converte milimetro para hectometro*/
 void mm_hm(Comprimento* comp){
     comp->hm = comp->mm / 100000;
-    printf("%.2fmm correspondem a %.2fhm", comp->mm, comp->hm);
+    printf("\n\033[1;34m# %.2fmm correspondem a %.2fhm\n\033[m", comp->mm, comp->hm);
 }
 /*Funcao que converte decametro para metro*/
 void dam_m(Comprimento* comp){
     comp->m = comp->dam * 10;
-    printf("%.2fdam correspondem a %.2fm", comp->dam, comp->m);
+    printf("\n\033[1;34m# %.2fdam correspondem a %.2fm\n\033[m", comp->dam, comp->m);
 }
 /*Funcao que converte metro para decametro*/
 void m_dam(Comprimento* comp){
     comp->dam = comp->m / 10;
-    printf("%.2fm correspondem a %.2fdam", comp->m, comp->dam);
+    printf("\n\033[1;34m# %.2fm correspondem a %.2fdam\n\033[m", comp->m, comp->dam);
 }
 /*Funcao que converte decametro para decimetro*/
 void dam_dm(Comprimento* comp){
     comp->dm = comp->dam * 100;
-    printf("%.2fdam correspondem a %.2fdm", comp->dam, comp->dm);
+    printf("\n\033[1;34m# %.2fdam correspondem a %.2fdm\n\033[m", comp->dam, comp->dm);
 }
 /*Funcao que converte decimetro para decametro*/
 void dm_dam(Comprimento* comp){
     comp->dam = comp->dm / 100;
-    printf("%.2fdm correspondem a %.2fdam", comp->dm, comp->dam);
+    printf("\n\033[1;34m# %.2fdm correspondem a %.2fdam\n\033[m", comp->dm, comp->dam);
 }
 /*Funcao que converte decametro para centimetro*/
 void dam_cm(Comprimento* comp){
     comp->cm = comp->dam * 1000;
-    printf("%.2fdam correspondem a %.2fcm", comp->dam, comp->cm);
+    printf("\n\033[1;34m# %.2fdam correspondem a %.2fcm\n\033[m", comp->dam, comp->cm);
 }
 /*Funcao que converte centimetro para decametro*/
 void cm_dam(Comprimento* comp){
     comp->dam = comp->cm / 1000;
-    printf("%.2fcm correspondem a %.2fdam", comp->cm, comp->dam);
+    printf("\n\033[1;34m# %.2fcm correspondem a %.2fdam\n\033[m", comp->cm, comp->dam);
 }
 /*Funcao que converte decametro para milimetro*/
 void dam_mm(Comprimento* comp){
     comp->mm = comp->dam * 10000;
-    printf("%.2fdam correspondem a %.2fmm", comp->dam, comp->mm);
+    printf("\n\033[1;34m# %.2fdam correspondem a %.2fmm\n\033[m", comp->dam, comp->mm);
 }
 /*Funcao que converte milimetro para decametro*/
 void mm_dam(Comprimento* comp){
     comp->dam = comp->mm / 10000;
-    printf("%.2fmm correspondem a %.2fdam", comp->mm, comp->dam);
+    printf("\n\033[1;34m# %.2fmm correspondem a %.2fdam\n\033[m", comp->mm, comp->dam);
 }
 /*Funcao que converte metro para decimetro*/
 void m_dm(Comprimento* comp){
     comp->dm = comp->m * 10;
-    printf("%.2fm correspondem a %.2fdm", comp->m, comp->dm);
+    printf("\n\033[1;34m# %.2fm correspondem a %.2fdm\n\033[m", comp->m, comp->dm);
 }
 /*Funcao que converte decimetro para metro*/
 void dm_m(Comprimento* comp){
     comp->m = comp->dm / 10;
-    printf("%.2fdm correspondem a %.2fm", comp->dm, comp->m);
+    printf("\n\033[1;34m# %.2fdm correspondem a %.2fm\n\033[m", comp->dm, comp->m);
 }
 /*Funcao que converte metro para centimetro*/
 void m_cm(Comprimento* comp){
     comp->cm = comp->m * 100;
-    printf("%.2fm correspondem a %.2fcm", comp->m, comp->cm);
+    printf("\n\033[1;34m# %.2fm correspondem a %.2fcm\n\033[m", comp->m, comp->cm);
 }
 /*Funcao que converte centimetro para metro*/
 void cm_m(Comprimento* comp){
     comp->m = comp->cm / 100;
-    printf("%.2fcm correspondem a %.2fm", comp->cm, comp->m);
+    printf("\n\033[1;34m# %.2fcm correspondem a %.2fm\n\033[m", comp->cm, comp->m);
 }
 /*Funcao que converte metro para milimetro*/
 void m_mm(Comprimento* comp){
     comp->mm = comp->m * 1000;
-    printf("%.2fm correspondem a %.2fmm", comp->m, comp->mm);
+    printf("\n\033[1;34m# %.2fm correspondem a %.2fmm\n\033[m", comp->m, comp->mm);
 }
 /*Funcao que converte milimetro para metro*/
 void mm_m(Comprimento* comp){
     comp->m = comp->mm / 1000;
-    printf("%.2fmm correspondem a %.2fm", comp->mm, comp->m);
+    printf("\n\033[1;34m# %.2fmm correspondem a %.2fm\n\033[m", comp->mm, comp->m);
 }
 /*Funcao que converte decimetro para centimetro*/
 void dm_cm(Comprimento* comp){
     comp->cm = comp->dm * 10;
-    printf("%.2fdm correspondem a %.2fcm", comp->dm, comp->cm);
+    printf("\n\033[1;34m# %.2fdm correspondem a %.2fcm\n\033[m", comp->dm, comp->cm);
 }
 /*Funcao que converte centimetro para decimetro*/
 void cm_dm(Comprimento* comp){
     comp->dm = comp->cm / 10;
-    printf("%.2fcm correspondem a %.2fdm", comp->cm, comp->dm);
+    printf("\n\033[1;34m# %.2fcm correspondem a %.2fdm\n\033[m", comp->cm, comp->dm);
 }
 /*Funcao que converte decimetro para milimetro*/
 void dm_mm(Comprimento* comp){
     comp->mm = comp->dm * 100;
-    printf("%.2fdm correspondem a %.2fmm", comp->dm, comp->mm);
+    printf("\n\033[1;34m# %.2fdm correspondem a %.2fmm\n\033[m", comp->dm, comp->mm);
 }
 /*Funcao que converte milimetro para decimetro*/
 void mm_dm(Comprimento* comp){
     comp->dm = comp->mm / 100;
-    printf("%.2fmm correspondem a %.2fdm", comp->mm, comp->dm);
+    printf("\n\033[1;34m# %.2fmm correspondem a %.2fdm\n\033[m", comp->mm, comp->dm);
 }
 /*Funcao que converte centimetro para milimetro*/
 void cm_mm(Comprimento* comp){
     comp->mm = comp->cm * 10;
-    printf("%.2fcm correspondem a %.2fmm", comp->cm, comp->mm);
+    printf("\n\033[1;34m# %.2fcm correspondem a %.2fmm\n\033[m", comp->cm, comp->mm);
 }
 /*Funcao que converte milimetro para centimetro*/
 void mm_cm(Comprimento* comp){
     comp->cm = comp->mm / 10;
-    printf("%.2fmm correspondem a %.2fcm", comp->mm, comp->cm);
+    printf("\n\033[1;34m# %.2fmm correspondem a %.2fcm\n\033[m", comp->mm, comp->cm);
 }
