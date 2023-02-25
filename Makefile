@@ -1,3 +1,3 @@
 make all:
-	gcc main.c comprimento.c -o run
+	gcc main.c -o run
 	./run

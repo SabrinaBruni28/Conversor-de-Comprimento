@@ -1,4 +1,5 @@
-#include "comprimento.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /*Funcao que o usuario escolhe converter ou sair.
   Retorna o numero da opcao escolhida.*/
@@ -31,9 +32,9 @@ void Nome(){
 }
 /*Funcao principal que conecta tudo.*/
 int main(){
-    Comprimento comp;
     int n1, n2, converte;
-    float valor;
+    float valor, medida[7]={1000, 100, 10, 1, 0.1, 0.01, 0.001};
+    char comprimento[7][3]={"km", "hm", "dam", "m", "dm", "cm", "mm"};
     Nome();
     converte = Comeco();
     while(converte == 1){
@@ -41,10 +42,9 @@ int main(){
         n1 = Opcoes();
         printf("\n\033[1;32mDigite ao valor do comprimento: \033[m");
         scanf("%f", &valor);
-        Adiciona_Valor(&comp, n1, valor);
         printf("\n\033[1;32mPara qual unidade sera convertida: \033[m");
         n2 = Opcoes();
-        Converte_Valor(&comp, n1, n2);
+        printf("\n\033[1;34m# %f %s correspondem a %f %s\n\033[m", valor, comprimento[n1-1], valor*medida[n1-1]/medida[n2-1], comprimento[n2-1]);
         converte = Comeco();
     }
     Asterisco(100);
